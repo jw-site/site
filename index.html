@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JW</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 190px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .logo-grid {
+            display: grid;
+            gap: 0;
+            width: 100%;
+            max-width: calc(4 * 200px); /* Max width for 4 logos of 200px each */
+        }
+
+        .logo {
+            width: 100%; /* Scale down responsively */
+            max-width: 200px; /* Maintain maximum size at 200px */
+            height: auto;
+        }
+
+        .email-link, .top-link {
+            font-family: 'Helvetica', sans-serif;
+            font-size: 14px;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+
+        .email-link:hover, .top-link:hover {
+            text-decoration: underline;
+        }
+
+        .email-link {
+            position: absolute;
+            bottom: 20px;
+        }
+
+        .top-link {
+            position: absolute;
+            top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 190px;
+            }
+            .logo-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+                max-width: calc(2 * 200px); /* Limit the grid width to fit 2 columns */
+            }
+        }
+
+        @media (min-width: 769px) {
+            .logo-grid {
+                grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Top Link to Home -->
+    <a href="home" class="top-link">JW</a>
+
+    <div class="logo-grid">
+        <img src="https://raw.githubusercontent.com/jw-site/site/refs/heads/main/01.svg" alt="Logo 1" class="logo">
+        <img src="https://raw.githubusercontent.com/jw-site/site/refs/heads/main/02.svg" alt="Logo 2" class="logo">
+        <img src="https://raw.githubusercontent.com/jw-site/site/refs/heads/main/03.svg" alt="Logo 3" class="logo">
+        <img src="https://raw.githubusercontent.com/jw-site/site/refs/heads/main/04.svg" alt="Logo 4" class="logo">
+        <img src="https://raw.githubusercontent.com/jw-site/site/refs/heads/main/05.svg" alt="Logo 5" class="logo">
+        <img src="https://raw.githubusercontent.com/jw-site/site/refs/heads/main/06.svg" alt="Logo 6" class="logo">
+        <img src="https://raw.githubusercontent.com/jw-site/site/refs/heads/main/07.svg" alt="Logo 7" class="logo">
+        <img src="https://raw.githubusercontent.com/jw-site/site/refs/heads/main/08.svg" alt="Logo 8" class="logo">
+        <img src="https://raw.githubusercontent.com/jw-site/site/refs/heads/main/09.svg" alt="Logo 9" class="logo">
+        <img src="https://raw.githubusercontent.com/jw-site/site/refs/heads/main/10.svg" alt="Logo 10" class="logo">
+        <img src="https://raw.githubusercontent.com/jw-site/site/refs/heads/main/11.svg" alt="Logo 11" class="logo">
+        <img src="https://raw.githubusercontent.com/jw-site/site/refs/heads/main/12.svg" alt="Logo 12" class="logo">
+    </div>
+
+    <!-- Email Link at the bottom -->
+    <a href="mailto:jaredworthington@gmail.com" class="email-link">EMAIL</a>
+
+    <!-- The shuffling script has been removed -->
+</body>
+</html>
